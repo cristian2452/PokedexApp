@@ -18,7 +18,7 @@
             android:layout_height="wrap_content" >
 
             <ImageView
-                android:id="@+id/beerPicture"
+                android:id="@+id/pokemonPicture"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_alignParentLeft="true" />
@@ -29,10 +29,10 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginStart="6dp"
                 android:layout_marginLeft="6dp"
-                android:layout_toStartOf="@+id/beerPicture"
-                android:layout_toLeftOf="@+id/beerPicture"
-                android:layout_toEndOf="@+id/beerPicture"
-                android:layout_toRightOf="@+id/beerPicture"
+                android:layout_toStartOf="@+id/pokemonPicture"
+                android:layout_toLeftOf="@+id/pokemonPicture"
+                android:layout_toEndOf="@+id/pokemonPicture"
+                android:layout_toRightOf="@+id/pokemonPicture"
                 android:orientation="vertical">
 
                 <TextView
