@@ -2,7 +2,7 @@ package com.example.chon.pokedexapp;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Pokemon {
+public class Pokemon extends PokemonResult {
     private int number;
     private String name;
     private String url;

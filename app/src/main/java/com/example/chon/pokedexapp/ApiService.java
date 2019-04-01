@@ -7,5 +7,5 @@ import retrofit2.http.GET;
 
 public interface ApiService {
     @GET("pokemon")
-    Call<List<Pokemon>> fetchPokemon();
+    Call<Pokemon> fetchPokemon();
 }
