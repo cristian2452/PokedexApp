@@ -9,10 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -30,7 +27,6 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.ViewHold
 
     public PokemonAdapter(List<Pokemon> datasets) {
         dataset = datasets;
-        Log.d(TAG,"set dataset");
     }
 
     @NonNull
@@ -39,7 +35,6 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.ViewHold
         context = viewGroup.getContext();
         View rootView = LayoutInflater.from(context)
                 .inflate(R.layout.item_pokemon, viewGroup, false);
-        Log.d(TAG,"on create viewholder");
         return new ViewHolder(rootView);
     }
 
@@ -50,12 +45,8 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.ViewHold
         final Pokemon pokemon = dataset.get(position);
 
         viewHolder.name.setText(pokemon.getName());
+        viewHolder.Id.setText("N.º "+pokemon.getNumber() );
 
-        /*
-        Glide.with(context)
-                .load(beer.getImageUrl())
-                .into(viewHolder.picture);
-        */
 
         Glide.with(context)
                 .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.getNumber() + ".png")
@@ -104,6 +95,8 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.ViewHold
         TextView name;
         @BindView(R.id.pokemonPicture)
         ImageView picture;
+        @BindView(R.id.Id)
+        TextView Id;
         //@BindView(R.id.parent_layout)
         //LinearLayout parentLayout;
 

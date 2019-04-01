@@ -44,7 +44,7 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/type"
+                    android:id="@+id/Id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/name"
@@ -52,23 +52,6 @@
                     android:textColor="@color/secondary_text"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/category"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/type"
-                    android:text="teest"
-                    android:textColor="@color/secondary_text"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/country"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/category"
-                    android:text="teeste"
-                    android:textColor="@color/secondary_text"
-                    android:textSize="14sp" />
             </LinearLayout>
 
         </RelativeLayout>
