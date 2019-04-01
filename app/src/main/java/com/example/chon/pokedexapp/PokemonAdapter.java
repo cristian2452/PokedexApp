@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -54,33 +55,28 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.ViewHold
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(viewHolder.picture);
 
-        /*
+
         viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,beer.getName(),Toast.LENGTH_SHORT).show();
+
+                //int temp = pokemon.getNumber();
 
                 Intent intent = new Intent(context, DetailsActivity.class);
-                intent.putExtra("name",beer.getName());
-                intent.putExtra("imageUrl",beer.getImageUrl());
-                intent.putExtra("type",beer.getType());
-                intent.putExtra("category",beer.getCategory());
-                intent.putExtra("country",beer.getCountry());
-                intent.putExtra("abv",beer.getAbv());
-                intent.putExtra("brewer",beer.getBrewer());
+                intent.putExtra("name",pokemon.getName());
+                intent.putExtra("IDpokemon",pokemon.getNumber());
 
                 context.startActivities(new Intent[]{intent});
 
             }
         });
-        */
+
         Log.d(TAG,"on blind viewholder");
     }
 
 
     @Override
     public int getItemCount() {
-        Log.d(TAG,"on get item"+dataset.size());
         return dataset.size();
     }
 
@@ -97,8 +93,8 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.ViewHold
         ImageView picture;
         @BindView(R.id.Id)
         TextView Id;
-        //@BindView(R.id.parent_layout)
-        //LinearLayout parentLayout;
+        @BindView(R.id.parent_layout)
+        LinearLayout parentLayout;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
